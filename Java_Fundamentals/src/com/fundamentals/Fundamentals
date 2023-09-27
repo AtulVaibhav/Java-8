@@ -1,0 +1,105 @@
+# Java is typed-language.
+# DataTypes tell what type of data a variable can store and much space it require.
+# 1.Primitive data-types
+# 2.Non-primitive data-types
+
+default package : java.lang
+
+Primitive data-types:pre-defined data-types
+There are 8 primitive data-types
+byte   :1 byte : 8 bits
+short  :2 bytes
+int    :4 bytes
+long   :8 bytes
+float  :4 bytes
+double :8 bytes
+char   :2 bytes
+boolean : 1 bit
+default data-type for interger values : int
+default data-type for decimal values : double
+
+
+Non-primitive data-types:null
+reference type. always points to some object
+class, string, array, interfaces
+
+class: template, blueprint
+object:real entity
+Car:class
+Santro,RangeRover :objects
+
+Variable:
+A named memory location where data is stored.
+declare a variable :
+data_type nameofVariable = value;
+
+Types :
+1.instance variable
+  variable declared outside the function.
+  these variables are related to objects.
+  these variables will get created only when object is created.
+  in order to access an instance variable, object is mandatory.
+
+2.static variable
+  static keyword is used to create static variable.
+  it is related to class.
+  these variables will get created during class loading
+  in order to access a static variable, we need className
+
+
+3.local variable
+  declared inside function.
+  we can't access local variables outside the function
+  within function only we can access local variable
+
+
+4.Methods/functions
+: block of statements perrform some specific task.
+: reuse same code
+: readibility
+
+# access-modifier return-type nameOfFunction(parameters){}:function definition
+# In order to execute function,we need to call(invoke) the function
+
+Types:
+pre-defined : length(), Math.max(), Math.abs()
+custom functions
+
+#Category:
+non-static function: can access static data as well non-static data.We need object
+to access non-static function
+static function: can access only static data:Using classname
+
+
+Constructor:
+-special function.
+-name of function is same as classname
+-it doesn't have return type,not even a void
+-without constructor, we can't instantiate(creating an object) a class.
+
+Types:
+1.default constructor: zero-arg constructor
+: if we will not define default constructor, then JVM will provide.
+
+2.Parameterized Constructor:
+: constructor having one or more parameters.
+: initialize an object(providing values to instance variable)
+
+Scanner class: java.util.Scanner
+:we can read input during program execution
+
+3.Copy constructor:
+:copy values from one object to another
+
+InstanceInitializationBlock:{}
+:every time block will get execute, whenever we create an object.
+:if constructor and IIB is present, then constructor is called first and from 
+constructor IIB is called.
+
+
+Static Block:
+this block will execute only once.
+
+this keyword:
+:reference variable.
+:current executing object
