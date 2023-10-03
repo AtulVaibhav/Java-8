@@ -1,0 +1,8 @@
+Decision Control Statement:
+: based on condition,execution happened
+
+1.if, if-else, if-else if-else(if-else ladder)
+ : if(condition){}=> if condition is true,block will execute
+ : if-else
+   if(condition){}else{}=>if condition is true,if block will execute
+                          otherwise else block will execute

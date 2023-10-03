@@ -22,6 +22,7 @@ public class ThisKeyword {
 }
 
 // VehicleData:modelNumber, vehicleName,  vehicleColor
+// parameterized constructor
  // show()
 
 
