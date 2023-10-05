@@ -14,9 +14,18 @@ public class IfStatement {
     		System.out.println(num+" is an odd number");
     	}
     }
+    
+    public static void ageVerification(int age){
+    	if(age>=18){
+    		System.out.println("Welcome to online voting");
+    	}else{
+    		System.out.println("Age Verification failed");
+    	}
+    }
 	public static void main(String[] args) {
 		 IfStatement.positiveNumber(-12);
 		 IfStatement.checkNumber(23);
+		 IfStatement.ageVerification(17);
 
 	}
 

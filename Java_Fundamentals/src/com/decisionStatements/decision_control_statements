@@ -6,3 +6,52 @@ Decision Control Statement:
  : if-else
    if(condition){}else{}=>if condition is true,if block will execute
                           otherwise else block will execute
+                          
+ if(condition 1) - else if(condition 2) -else
+ if condition-1 fails it will check condition-2,if this fails also then 
+ only it will go to else
+ 
+ Nested if:
+ 
+ User input:
+ Scanner sc = new Scanner(System.in);
+ integer value = sc.nextInt();
+ String value = sc.next();
+ 
+ 
+ Loops: iteration
+ 1.for loop:
+ - it is called as pre-check
+ - when we know number of iteration(finite number of iteration)
+ - Syntax:
+    for(initialization; condition ; update){
+        //body of loop;
+        }
+- minimum number of execution : 0
+  Nested for :
+    
+   
+ 2.while loop:
+ it is called as pre-check
+ when we don't know exact of iteration then we will while loop
+ Syntax:
+    initialize;
+    while(condition){
+    
+        //body
+        
+        update;
+        }
+ minimum number of execution :0      
+ 
+ 3.do-while:
+ -minimum number of execution  :1
+ -Syntax:
+    do{
+        //body 
+      update;  
+      }while(condition);
+ -it's called post-check
+ 
+ 
+ 
