@@ -53,5 +53,21 @@ Decision Control Statement:
       }while(condition);
  -it's called post-check
  
+ Switch :
+ used to provide vrious options to user
+ syntax:
+ switch(option):
+ case 1:
+ case 2:
+ .....
+ default:
  
+ break:
+ -stop iteration
+ -switch or loop
+ if we are using break statement inside inner loop,then break will
+ stop execution for inner loop only
+ 
+ continue:
+ -skip for single iteration and continue for next
  
