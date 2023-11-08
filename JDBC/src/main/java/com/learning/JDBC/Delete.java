@@ -5,7 +5,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-public class Insertion {
+public class Delete {
 	private static final String DRIVER_CLASS="com.mysql.jdbc.Driver";
 	private static final String DATABASE_URL="jdbc:mysql://localhost:3306/jdbc";
 	private static final String DATABAE_USERNAME="root";
@@ -35,19 +35,15 @@ public class Insertion {
 		return con;
 	}
 	
-	
-	public static String insertData() throws SQLException{
-		String query ="insert into student values (105,'Vivek','Web Development')";
+	public static void deleteStudent() throws SQLException{
+		String sql = "delete from student where studentId=105";
 		Statement stmt = getConnection().createStatement();
-		int numberOfRows = stmt.executeUpdate(query);
-		if(numberOfRows>0){
-			return "Data added successfully";
-		}
-		return "Something went wrong";
+		int i = stmt.executeUpdate(sql);
+		System.out.println("Student having id:105 deleted successfully");
 	}
-	
 	public static void main(String[] args) throws SQLException {
-		System.out.println(insertData());
+		deleteStudent();
+
 	}
 
 }

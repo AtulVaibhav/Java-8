@@ -5,7 +5,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-public class Insertion {
+public class BatchProcessing {
 	private static final String DRIVER_CLASS="com.mysql.jdbc.Driver";
 	private static final String DATABASE_URL="jdbc:mysql://localhost:3306/jdbc";
 	private static final String DATABAE_USERNAME="root";
@@ -34,20 +34,26 @@ public class Insertion {
 		
 		return con;
 	}
-	
-	
-	public static String insertData() throws SQLException{
-		String query ="insert into student values (105,'Vivek','Web Development')";
+	public static void multipleQuery() throws SQLException{
+		String sql1 ="insert into student values (106,'Vivek','python')";
+		String sql2 ="insert into student values (107,'Aashish','python')";
+		String sql3 ="insert into student values (108,'John','Java')";
+		String sql4 ="insert into student values (109,'Prateek','NodeJS')";
+		
 		Statement stmt = getConnection().createStatement();
-		int numberOfRows = stmt.executeUpdate(query);
-		if(numberOfRows>0){
-			return "Data added successfully";
-		}
-		return "Something went wrong";
-	}
+		stmt.addBatch(sql1);
+	    stmt.addBatch(sql2);
+	    stmt.addBatch(sql3);
+	    stmt.addBatch(sql4);
+	    int[] rows = stmt.executeBatch();
+	    for(int i=0;i<rows.length;i++){
+	    	System.out.println(i+" row affected");
+	    }
 	
+	}
 	public static void main(String[] args) throws SQLException {
-		System.out.println(insertData());
+	  multipleQuery();
+
 	}
 
 }
